@@ -24,6 +24,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7da6bd1f-9e35-473c-8e34-d3878272f791"
+      }
+    },
+    "owner": "apokats"
   }
 }
