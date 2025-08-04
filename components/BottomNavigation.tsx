@@ -9,7 +9,7 @@ type BottomBarNavigationProps = {
 const BottomNavigation = ({onPressHome, onPressAdd}: BottomBarNavigationProps) => {
   return (
     <View style={styles.containerBottomNavigation}>
-      <TouchableOpacity onPress= {onPressHome}>
+      <TouchableOpacity onPress={onPressHome}>
         <Ionicons name="home" size={32} style={styles.icon} />
       </TouchableOpacity>
       <TouchableOpacity onPress={onPressAdd}>

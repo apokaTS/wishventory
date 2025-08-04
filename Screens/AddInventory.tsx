@@ -26,7 +26,7 @@ export default function AddInventory({ agregarInventario, editItem }) {
 
   const handleAgregar = () => {
     const nuevoInventario = {
-      id: editItem ? id : Date.now().toString(), // ID automático si es nuevo
+      ...(editItem && { id }), // Solo manda el id si es edición
       descripcion,
       costo: parseFloat(costo),
       minimo: parseInt(minimo),
@@ -43,7 +43,6 @@ export default function AddInventory({ agregarInventario, editItem }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{editItem ? "Editar" : "Agregar"} Inventario</Text>
-      {/* Elimina el campo de ID */}
       <TextInput
         style={styles.input}
         placeholder="Descripción"
